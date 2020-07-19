@@ -1,2 +1,2 @@
 # springboot-services
-springboot micro-service for docker &amp; k8s demo
+springboot micro-service demo for docker &amp; k8s 
