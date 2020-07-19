@@ -1,0 +1,21 @@
+version: "3"
+services:
+  user-service:
+    build:
+      context: user-service
+      dockerfile: Dockerfile
+    image: user-service:1
+  staff-service:
+    build: staff-service
+    image: staff-service:1
+  consumer-service:
+    build:
+     context: ./consumer-service
+     dockerfile: Dockerfile
+    image: consumer-service:1
+    links:
+      - user-service
+      - staff-service
+    ports:
+      - 9000:9000
+
